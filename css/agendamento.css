@@ -1,6 +1,3 @@
-/* ======================
-        serviços
-====================== */
 /* Configurações gerais do Header */
 
 header {
@@ -347,7 +344,7 @@ header.scrolled {
 
             rgba(245, 238, 230, 0.35) 60%,
             rgba(245, 238, 230, 0.05) 100%),
-        url(../assets/images/banner-serviços.png);
+        url(../assets/images/img-agendamento-banner.png);
     /* ajustando imagem */
     background-size: cover;
     background-position: center right;
@@ -470,21 +467,195 @@ header.scrolled {
 }
 
 /* ==========================
-serviços section rosa
-======================== */
-.section-servicos {
-    background: var(--color-primary-dark);
+   passo a passo de agendamento(booking)
+========================== */
+
+.booking-steps {
+    background: #E9E1D7;
+    padding: 90px 0;
 }
 
-.section-servicos h2 {
-    color: var(--color-text-white);
-    font-size: 36px;
+.titulo-steps {
+    font-size: 42px;
+    color: #5D4B43;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
-.section-servicos p {
-    color: var(--color-text-white);
-    font-size: 16px;
-    line-height: 1.8;
+.texto-steps {
+    font-size: 15px;
+    color: #6A5A52;
+    max-width: 650px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* corpo do card */
+.step-card {
+    background: #C97866;
+    border-radius: 12px;
+    min-height: 290px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* numeração */
+.step-numero {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #C7A16C;
+    margin-bottom: 25px;
+}
+
+/* titulos dos cards de step */
+.step-card h3 {
+    font-size: 22px;
+    color: #FFF4EE;
+    margin-bottom: 18px;
+}
+
+/* texto dos cards */
+.step-card p {
+    color: rgba(255, 255, 255, .9);
+    line-height: 1.6;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* ---------Mobile cards de agendamento */
+@media(max-width:991px) {
+
+    .booking-steps .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .step-card {
+        min-height: auto;
+    }
+
+    .titulo-steps {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .texto-steps {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .step-card {
+        min-height: auto;
+    }
+}
+
+/* ==================================
+    Formulário de agendamento
+================================= */
+.agendamento-section{
+    background:#E7DED2;
+}
+
+.img-agendamento{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.form-wrapper{
+    max-width:650px;
+    padding:60px 40px;
+    margin:auto;
+}
+
+.form-wrapper h2{
+    font-size:36px;
+    color:#4F443C;
+    margin-bottom:10px;
+}
+
+.form-wrapper h2 span{
+    color:#CDA15D;
+}
+
+.descricao{
+    font-size:14px;
+    color:#6D6258;
+    line-height:1.5;
+    margin-bottom:30px;
+    max-width:580px;
+}
+
+.campo{
+    height:46px;
+    border:1px solid #7E8A84;
+    border-radius:10px;
+    background:transparent;
+    box-shadow:none;
+}
+
+.campo:focus{
+    border-color:#7E8A84;
+    box-shadow:none;
+}
+
+.form-select{
+    cursor:pointer;
+}
+
+.checkbox-area{
+    max-width:420px;
+    margin:0 auto 30px auto;
+}
+
+.checkbox-area label{
+    font-size:11px;
+    color:#85796E;
+    line-height:1.4;
+}
+
+.btn-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: var(--color-base-800);
+      color: var(--color-text-white);
+      text-decoration: none;
+      border-radius: 40px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: .3s ease;
+  }
+
+  .btn-banner:hover {
+      background: var(--color-base-801);
+  }
+
+@media(max-width:991px){
+
+    .img-agendamento{
+        height:320px;
+    }
+
+    .form-wrapper{
+        padding:40px 25px;
+    }
+
+    .form-wrapper h2{
+        font-size:34px;
+    }
 }
 
 /* ==========================
@@ -679,148 +850,98 @@ serviços-tratamentos
 
 }
 
-/* ==========================
-   Agendamento
-========================== */
-.section-agendamento .row{
-    min-height: 320px;
-}
+/* ==========================================
+          section de contato
+========================================== */
 
-.img-agendamento{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.conteudo-agendamento{
-    background: var(--color-background-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 60px;
-}
+  .section-contato {
+      padding: 100px 0;
+      background: var(--color-background-secondary);
+  }
+  .contato-info h2 {
+      font-size: 36px;
+      color: var(--color-text-primary);
+      margin-bottom: 20px;
+      line-height: 1.2;
+  }
 
+  .contato-info h2 span {
+      color: #BE9A65;
+  }
 
-.texto-agendamento{
-    max-width: 560px;
-}
+  .descricao {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #4A3F35;
+      margin-bottom: 30px;
+  }
 
-.texto-agendamento h2{
-    font-size: 36px;
-    line-height: 1.2;
-    color: var(--color-text-white);
-    margin-bottom: 18px;
-}
+ /* informações de contato */
+  .lista-contato {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 35px;
+  }
 
-.texto-agendamento p{
-    font-size: 16px;
-    line-height: 1.7;
-    color: rgba(255,255,255,.85);
+  .lista-contato li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      color: #4A3F35;
+      font-size: 16px;
+  }
 
-    margin-bottom: 28px;
-}
+  .lista-contato i {
+      color: #BE9A65;
+  }
 
-/* botão agendamento */
-.btn-banner{
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    background: var(--color-base-800);
-    color: var(--color-text-white);
-    text-decoration: none;
-    border-radius: 40px;
-    font-size: 15px;
-    font-weight: 500;
-    transition: .3s ease;
-}
+  .horarios h3 {
+      font-size: 20px;
+      color: #2A2220;
+      margin-bottom: 15px;
+  }
 
-.btn-banner i{
-    color: var(--color-base-400);
-}
+  .horarios p {
+      margin-bottom: 8px;
+      color: #4A3F35;
+  }
 
-.btn-banner:hover{
-    background: var(--color-base-801);
-}
+ /* mapa da clínica endereco */
+  .mapa-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  }
 
-/* mobile agen. */
-@media(max-width:991px){
+  .mapa-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      display: block;
+  }
 
-    .conteudo-agendamento{
-        padding: 45px 30px;
-        text-align: center;
-    }
+  /* MOBILE do contato*/
+  @media(max-width:768px) {
 
-    .texto-agendamento{
-        max-width: 100%;
-    }
+      .section-contato {
+          padding: 80px 20px;
+      }
 
-    .texto-agendamento h2{
-        font-size: 30px;
-    }
+      .contato-info {
+          text-align: center;
+      }
 
-    .texto-agendamento p{
-        font-size: 15px;
-    }
+      .lista-contato li {
+          justify-content: center;
+      }
 
-    .img-agendamento{
-        min-height: 260px;
-    }
-}
-/* ============
-    faq
-=========== */
-.faq-section{
-    background: #E8DDD0;
-}
+      .mapa-container iframe {
+          height: 320px;
+      }
+  }
 
-.faq-subtitulo{
-    display: block;
-    font-size: 14px;
-    color: #5A4A42;
-    margin-bottom: 8px;
-}
-
-.faq-titulo{
-     font-size: 36px;
-    color: #5A4A42;
-    margin-bottom: 0;
-}
-
-.accordion{
-    --bs-accordion-border-width: 0;
-    --bs-accordion-bg: #F7F3EE;
-    --bs-accordion-border-radius: 16px;
-}
-
-.accordion-item{
-    margin-bottom: 18px;
-    border-radius: 16px !important;
-    overflow: hidden;
-}
-
-.accordion-button{
-    background: #F7F3EE;
-    padding: 1.3rem 1.5rem;
-    color: #5A4A42;
-    font-size: 18px;
-  
-}
-
-.accordion-button:not(.collapsed){
-    background: #F7F3EE;
-    color: #5A4A42;
-}
-
-.accordion-button::after{
-    filter: sepia(1) saturate(4);
-}
-
-.accordion-body{
-    color: #6B5B52;
-}
-
-/* FOOTER CLINICAAAA */
+  /* FOOTER CLINICAAAA */
   .footer-clinica {
       background: var(--color-base-800);
       padding: 90px 0;
